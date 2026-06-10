@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import { PIXEL_ICONS, PROJECTS } from '../data/content'
 import PixelArt from './PixelArt'
+import PixelScene from './PixelScene'
 import Reveal from './Reveal'
 import SectionTitle from './SectionTitle'
 
@@ -18,9 +19,14 @@ const Portfolio: FC = () => {
           {PROJECTS.map((project, i) => (
             <Reveal key={project.id} delay={(i % 2) * 120}>
               <article className="group pixel-corners overflow-hidden border-2 border-zgray/30 bg-[#0a0a0a] transition-all duration-300 hover:border-primary hover:shadow-[0_0_24px_rgba(255,216,5,0.2)]">
-                {/* Miniatura pixel art */}
-                <div className="scanlines relative flex h-44 items-center justify-center bg-gradient-to-br from-[#1a1400] via-black to-[#170e00]">
-                  <div className="transition-transform duration-300 group-hover:scale-125">
+                {/* Miniatura: ciudad pixel-art nocturna única por proyecto */}
+                <div className="scanlines relative flex h-44 items-center justify-center overflow-hidden bg-black">
+                  <PixelScene
+                    seed={project.id * 31 + 5}
+                    variant="night"
+                    className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="relative z-10 transition-transform duration-300 group-hover:scale-125 drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]">
                     <PixelArt matrix={PIXEL_ICONS[project.icon]} size={9} label={project.title} />
                   </div>
                   <span className="absolute top-3 left-3 z-10 bg-accent px-2 py-1 font-brand text-[8px] text-black">

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import type { FC } from 'react'
 import { COMPANY, PIXEL_ICONS } from '../data/content'
 import PixelArt from './PixelArt'
+import PixelScene from './PixelScene'
 
 interface Particle {
   x: number
@@ -75,8 +76,12 @@ const Hero: FC = () => {
   return (
     <section
       id="inicio"
-      className="scanlines retro-grid relative flex min-h-screen items-center justify-center overflow-hidden bg-black"
+      className="scanlines relative flex min-h-screen items-center justify-center overflow-hidden bg-black"
     >
+      {/* Ciudad pixel-art al atardecer (estilo lofi, paleta Zentrox) */}
+      <PixelScene seed={7} variant="sunset" className="absolute inset-0 h-full w-full object-cover" />
+      {/* Velo oscuro para legibilidad del texto sobre la escena */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/10" />
       <PixelParticles />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-28 text-center sm:px-6">
