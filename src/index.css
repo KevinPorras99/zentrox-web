@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ============ Zentrox — Identidad de marca ============ */
+@theme {
+  --color-primary: #ffd805; /* Primary Gold */
+  --color-accent: #f49f20;  /* Orange Accent */
+  --color-cream: #ffe37c;   /* Light Cream */
+  --color-zgray: #afafaf;   /* Gray */
+  --color-bg: #000000;      /* Black */
+
+  --font-brand: "Press Start 2P", monospace;
+  --font-body: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --color-primary: #ffd805;
+  --color-accent: #f49f20;
+  --color-cream: #ffe37c;
+  --color-gray: #afafaf;
+  --color-bg: #000000;
+  --color-text: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Scrollbar retro */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border: 2px solid #0a0a0a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ============ Efectos retro-arcade ============ */
+
+/* Overlay de scanlines tipo CRT */
+.scanlines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.25) 3px,
+    rgba(0, 0, 0, 0.25) 4px
+  );
+  z-index: 1;
+}
+
+/* Borde pixelado (esquinas escalonadas) */
+.pixel-corners {
+  clip-path: polygon(
+    0 8px, 4px 8px, 4px 4px, 8px 4px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 4px) calc(100% - 8px), calc(100% - 4px) calc(100% - 4px), calc(100% - 8px) calc(100% - 4px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+}
+
+/* Cursor parpadeante de terminal */
+.blink-cursor::after {
+  content: "▌";
+  color: var(--color-primary);
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Flotación pixelada (pasos discretos, estilo 8-bit) */
+@keyframes pixel-float {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(-10px); }
+  75% { transform: translateY(-6px); }
+}
+.pixel-float {
+  animation: pixel-float 3s steps(4) infinite;
+}
+
+/* Glitch al hacer hover */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+  100% { transform: translate(0); }
+}
+.glitch-hover:hover {
+  animation: glitch 0.3s steps(2) infinite;
+}
+
+/* Animaciones de entrada al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Marquee infinito para tecnologías */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Grid retro de fondo */
+.retro-grid {
+  background-image:
+    linear-gradient(rgba(255, 216, 5, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 216, 5, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
