@@ -1,204 +1,266 @@
-# CLAUDE.md — Contexto del Proyecto Zentrox
+# CLAUDE.md — Zentrox Web
 
-Este archivo fue generado desde una sesión de Cowork para proporcionar contexto completo a Claude Code. Contiene toda la información sobre la empresa, identidad de marca, servicios, stack técnico y requerimientos del proyecto web.
+Contexto completo para AI assistants: empresa, marca, codebase, convenciones y flujos de trabajo.
 
 ---
 
-## 1\. Sobre la Empresa
+## 1. Sobre la Empresa
 
 | Campo | Detalle |
 | :---- | :---- |
 | **Nombre** | Zentrox |
 | **Tipo** | Empresa de Desarrollo de Software e Inteligencia Artificial |
 | **Ubicación** | Alajuela, Costa Rica |
-| **Correo** | [kevinporras9906@gmail.com](mailto:kevinporras9906@gmail.com) |
-| **Teléfono** | \+506 8645-7832 |
+| **Correo** | kevinporras9906@gmail.com |
+| **Teléfono** | +506 8645-7832 |
 | **Eslogan** | "Transformamos ideas en soluciones digitales innovadoras." |
 | **Headline principal** | SOLUCIONES TECNOLÓGICAS INTELIGENTES |
 
 ---
 
-## 2\. Identidad de Marca
+## 2. Identidad de Marca
 
-### Paleta de colores (oficial)
+### Paleta de colores (OBLIGATORIA — no inventar colores nuevos)
 
-Primary Gold:   \#ffd805   ← Color principal, textos destacados, CTAs
+```
+--color-primary:  #ffd805   ← dorado, textos destacados, CTAs, bordes activos
+--color-accent:   #f49f20   ← naranja, íconos, hover states
+--color-cream:    #ffe37c   ← fondos secundarios, gradientes suaves
+--color-gray:     #afafaf   ← textos secundarios, bordes, decoraciones
+--color-bg:       #000000   ← fondo principal
+--color-text:     #ffffff   ← texto base
+```
 
-Orange Accent:  \#f49f20   ← Acentos, íconos, hover states
+Estas variables están definidas en `src/index.css`. Usarlas siempre vía variable CSS o Tailwind arbitrario (`text-[#ffd805]`).
 
-Light Cream:    \#ffe37c   ← Fondos secundarios, gradientes suaves
+### Tipografía
 
-Gray:           \#afafaf   ← Textos secundarios, bordes, decoraciones
+```
+--font-brand: 'Press Start 2P', monospace   ← títulos, marca, secciones hero
+--font-body:  'Space Grotesk', sans-serif   ← cuerpo, descripciones, formularios
+```
 
-Black:          \#000000   ← Fondo principal, texto base
+Ambas fuentes se cargan desde Google Fonts en `index.html`.
 
-### Estilo visual
+### Estética
 
-- **Estética:** Retro-arcade / 8-bit / pixel art — minimalista, profesional, corporativo  
-- **Tipografía:** Retro pixelada (tipo arcade) para títulos/marca; sans-serif moderna para cuerpo de texto  
-- **Tono:** Futurista pero con carácter retro-gamer, elegante, alto contraste  
-- **Logo:** Isologo (símbolo \+ texto fusionados), estilo pixel art con patrón de mosaico detrás, fondo negro, dorado y naranja
-
-### Assets generados (Canva)
-
-- **Isologo guardado:** [https://www.canva.com/d/FOdHT3X6Vi2Fg\_3](https://www.canva.com/d/FOdHT3X6Vi2Fg_3)  
-- **Post Instagram guardado:** [https://www.canva.com/d/p\_s\_ljKMEj5IYf](https://www.canva.com/d/p_s_ljKMEj5IYf)\_  
-- **Banner HTML:** `zentrox_banner.html` (incluido en este proyecto)
-
----
-
-## 3\. Servicios de la Empresa
-
-| \# | Servicio | Descripción breve |
-| :---- | :---- | :---- |
-| 1 | Desarrollo de Software a Medida | Soluciones digitales hechas para cada negocio |
-| 2 | Aplicaciones Web y Móviles | Experiencias digitales en cualquier dispositivo |
-| 3 | Sistemas Empresariales (ERP y CRM) | Gestión inteligente de la empresa |
-| 4 | Inteligencia Artificial | Automatiza y potencia decisiones con IA |
-| 5 | Automatización de Procesos | Elimina tareas repetitivas y ahorra tiempo |
-| 6 | Integración de APIs | Conecta sistemas y plataformas sin esfuerzo |
-| 7 | Soluciones SaaS | Software escalable bajo modelo de suscripción |
-| 8 | Bases de Datos y Cloud Computing | Información segura y disponible siempre |
-| 9 | Ciberseguridad | Protección de datos y sistemas críticos |
-| 10 | Soporte y Mantenimiento | Acompañamiento continuo post-entrega |
+- Retro-arcade / 8-bit / pixel art — minimalista, profesional
+- Alto contraste negro/dorado
+- Pixel art generativo (SVG matrices + canvas procedural)
+- CRT scanlines, glitch hover, floating animations
 
 ---
 
-## 4\. Stack Técnico del Desarrollador (Kevin Porras)
+## 3. Servicios (10 total — datos en `src/data/content.ts`)
 
-Lenguajes:
-
-  \- PHP 8, Python, JavaScript, TypeScript, Java, C++
-
-Frameworks:
-
-  \- Laravel 11 (backend principal)
-
-  \- ReactJS (frontend)
-
-  \- Bootstrap
-
-Bases de datos:
-
-  \- MySQL
-
-  \- PostgreSQL
-
-Auth & Pagos:
-
-  \- Clerk Auth
-
-  \- Stripe
-
-  \- JWT
-
-  \- Laravel Sanctum
-
-BaaS / Cloud:
-
-  \- Supabase (Postgres, Auth, Realtime, Storage)
-
-  \- Microsoft Azure
-
-  \- AWS (EC2, RDS)
-
-  \- Netlify
-
-DevOps & CI/CD:
-
-  \- GitHub Actions
-
-  \- Docker (básico)
-
-  \- CI/CD Pipelines
-
-  \- Linux CLI
-
-Herramientas AI:
-
-  \- Claude (Anthropic)
-
-  \- ChatGPT (OpenAI)
-
-  \- Gemini (Google)
-
-Colaboración:
-
-  \- Git, GitHub
-
-  \- Azure DevOps (Boards & Repos)
-
-  \- Trello
+| # | Servicio |
+| :- | :------- |
+| 1 | Desarrollo de Software a Medida |
+| 2 | Aplicaciones Web y Móviles |
+| 3 | Sistemas Empresariales (ERP y CRM) |
+| 4 | Inteligencia Artificial |
+| 5 | Automatización de Procesos |
+| 6 | Integración de APIs |
+| 7 | Soluciones SaaS |
+| 8 | Bases de Datos y Cloud Computing |
+| 9 | Ciberseguridad |
+| 10 | Soporte y Mantenimiento |
 
 ---
 
-## 5\. Proyecto Web — Requerimientos
+## 4. Stack del Proyecto Web
 
-### Objetivo
+| Capa | Tecnología | Versión |
+| :--- | :--------- | :------ |
+| Framework | React | 19 |
+| Lenguaje | TypeScript | ~6.0 |
+| Build | Vite | 8 |
+| Estilos | Tailwind CSS | 4 (Vite plugin) |
+| Deploy | GitHub Pages | via GitHub Actions |
+| Animaciones | CSS custom + canvas | — |
 
-Crear el sitio web oficial de Zentrox que refleje la identidad de marca retro-arcade profesional, con imágenes representativas, secciones interactivas y alto impacto visual.
-
-### Stack elegido
-
-Frontend: React \+ TypeScript
-
-Estilos: Tailwind CSS (recomendado) o CSS Modules
-
-Animaciones: Framer Motion o CSS animations
-
-### Secciones requeridas
-
-1. **Hero / Landing** — Headline principal, eslogan, CTA ("Contáctanos" / "Ver servicios"), animaciones pixel art  
-2. **Servicios** — Cards interactivas para cada uno de los 10 servicios, con íconos estilo pixel  
-3. **Sobre Nosotros** — Historia de la empresa, misión, visión  
-4. **Portafolio / Proyectos** — Trabajos realizados  
-5. **Tecnologías** — Stack que dominamos (logos/íconos animados)  
-6. **Contacto** — Formulario de contacto, datos de la empresa  
-7. **Footer** — Links, redes sociales, copyright Zentrox
-
-### Guía de diseño para el código
-
-/\* Colores — usar como variables CSS \*/
-
-\--color-primary: \#ffd805;
-
-\--color-accent: \#f49f20;
-
-\--color-cream: \#ffe37c;
-
-\--color-gray: \#afafaf;
-
-\--color-bg: \#000000;
-
-\--color-text: \#ffffff;
-
-/\* Tipografía sugerida (Google Fonts) \*/
-
-\--font-brand: 'Press Start 2P', monospace;   /\* títulos retro \*/
-
-\--font-body: 'Inter' o 'Space Grotesk', sans-serif; /\* cuerpo \*/
-
-### Comportamientos interactivos esperados
-
-- Hover effects en cards de servicios (efecto pixel/glitch o iluminación dorada)  
-- Animaciones de entrada al hacer scroll (fade-in, slide-up)  
-- Cursor personalizado o partículas estilo pixel en el hero  
-- Navbar sticky con cambio de estilo al hacer scroll  
-- Formulario de contacto con validación y feedback visual
+**Sin dependencias de UI** (no hay MUI, Shadcn, etc.) — todos los componentes son custom.
 
 ---
 
-## 6\. Notas para Claude Code
+## 5. Estructura del Repositorio
 
-- Respetar **estrictamente** la paleta de colores oficial (`#ffd805`, `#f49f20`, `#ffe37c`, `#afafaf`, `#000000`)  
-- La tipografía de títulos debe ser pixel/retro — usar `Press Start 2P` de Google Fonts  
-- El diseño es **mobile-first**, responsive  
-- Preferir componentes funcionales con hooks en React  
-- Usar TypeScript con tipado estricto  
-- El archivo `zentrox_banner.html` incluido tiene el banner SVG de referencia visual  
-- Las imágenes deben ser representativas de tech/AI/software con el estilo retro-arcade de la marca  
-- Incluir `CLAUDE.md` actualizado en el repositorio para mantener contexto entre sesiones
+```
+zentrox-web/
+├── .github/workflows/deploy.yml    # CI/CD: build + deploy a GitHub Pages en push a main
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   ├── Navbar.tsx              # Header sticky, mobile menu, scroll style change
+│   │   ├── Hero.tsx                # Hero section, canvas particles, PixelScene sunset
+│   │   ├── Services.tsx            # Grid de 10 cards de servicios
+│   │   ├── About.tsx               # Misión/Visión/Valores + stats KPIs
+│   │   ├── Portfolio.tsx           # 4 proyectos showcase con PixelScene night
+│   │   ├── Technologies.tsx        # Marquee infinito + grid de 6 categorías tech
+│   │   ├── Contact.tsx             # Formulario con validación + mailto
+│   │   ├── Footer.tsx              # Links, redes sociales, copyright dinámico
+│   │   ├── PixelArt.tsx            # Renderer SVG de matrices de pixel art
+│   │   ├── PixelScene.tsx          # Generador procedural de ciudad pixelada (canvas)
+│   │   ├── Reveal.tsx              # Wrapper para animaciones scroll-triggered
+│   │   └── SectionTitle.tsx        # Header reutilizable de sección (eyebrow+title+sub)
+│   ├── data/
+│   │   └── content.ts              # TODA la data: servicios, tech, proyectos, nav links
+│   ├── hooks/
+│   │   └── useReveal.ts            # IntersectionObserver hook → { ref, visible }
+│   ├── index.css                   # Variables CSS, fuentes, animaciones custom
+│   ├── main.tsx                    # Punto de entrada React
+│   └── App.tsx                     # Composición de secciones (sin router)
+├── index.html                      # HTML raíz, lang="es", carga Google Fonts
+├── vite.config.ts                  # base: '/zentrox-web/' en build, '/' en dev
+├── tsconfig.json / tsconfig.app.json / tsconfig.node.json
+├── eslint.config.js                # ESLint flat config
+├── package.json
+└── CLAUDE.md                       # Este archivo
+```
 
 ---
 
-*Generado por Claude Cowork — Sesión: Kevin Porras / Zentrox — Junio 2026*  
+## 6. Arquitectura y Convenciones de Código
+
+### Navegación
+
+No hay React Router. El sitio es un SPA de scroll vertical con `id` en cada sección. Los links usan `href="#seccion"` y `scroll-behavior: smooth` en CSS.
+
+IDs de sección: `#inicio`, `#servicios`, `#nosotros`, `#portafolio`, `#tecnologias`, `#contacto`
+
+### Componentes
+
+```typescript
+// Patrón estándar
+const MyComponent: FC = () => { ... }
+const MyComponent: FC<Props> = ({ prop }) => { ... }
+
+// Props con interface explícita
+interface MyComponentProps {
+  children?: ReactNode
+  className?: string
+  delay?: number
+}
+```
+
+- Componentes funcionales con hooks, sin clases
+- Tipado estricto — `noUnusedLocals`, `noUnusedParameters` habilitados
+- Sin state management externo — solo `useState` / `useRef` locales
+
+### Animaciones de scroll
+
+Usar el componente `<Reveal>` para animar elementos al entrar al viewport:
+
+```tsx
+<Reveal delay={index * 100}>
+  <article>...</article>
+</Reveal>
+```
+
+`Reveal` usa `useReveal` hook que aplica IntersectionObserver y agrega `.visible` a la clase `.reveal`. La animación está definida en `index.css`.
+
+### Pixel Art (íconos)
+
+Los íconos se definen como matrices de caracteres en `src/data/content.ts` dentro del objeto `PIXEL_ICONS`. El componente `<PixelArt>` los renderiza como SVG con `shapeRendering="crispEdges"`.
+
+Paleta de caracteres en matrices:
+```
+g → #ffd805 (gold)
+o → #f49f20 (orange)
+c → #ffe37c (cream)
+a → #afafaf (gray)
+w → #ffffff (white)
+b → #000000 (black)
+. → transparent
+```
+
+Para añadir un nuevo ícono, agregar la matriz a `PIXEL_ICONS` en `content.ts`.
+
+### PixelScene (fondos procedurales)
+
+`<PixelScene>` genera una ciudad pixel-art de forma determinista usando una semilla (`seed` prop). Las variantes son `'sunset'` (dorado) y `'night'` (oscuro). Resolución interna: 240×135px escalada con `imageRendering: pixelated`.
+
+```tsx
+<PixelScene variant="sunset" seed={42} className="w-full h-full" />
+<PixelScene variant="night"  seed={project.id} className="..." />
+```
+
+### Datos de contenido
+
+**Toda la data editable está en `src/data/content.ts`** — nunca hardcodear texto en componentes. Si hay que modificar servicios, proyectos, tech stack o links de navegación, editar solo ese archivo.
+
+Exports principales:
+- `COMPANY` — info de la empresa
+- `PIXEL_ICONS` — matrices de íconos
+- `SERVICES` — array de 10 servicios
+- `TECHNOLOGIES` — array de 6 categorías con sus tecnologías
+- `PROJECTS` — array de 4 proyectos de portafolio
+- `NAV_LINKS` — array de links de navegación
+
+### Estilos
+
+- Tailwind utilities para layout, spacing, colores
+- Clases custom en `index.css` para animaciones y efectos: `.scanlines`, `.pixel-float`, `.glitch-hover`, `.reveal`, `.marquee-track`, `.pixel-corners`, `.blink-cursor`
+- Variables CSS `--color-*` para colores de marca
+- Mobile-first siempre: breakpoints `md:` y `lg:` para tablet/desktop
+
+---
+
+## 7. Flujos de Desarrollo
+
+### Comandos principales
+
+```bash
+npm install          # instalar dependencias
+npm run dev          # servidor de desarrollo → http://localhost:5173
+npm run build        # compilar → dist/ (TypeScript + Vite)
+npm run lint         # ESLint
+npm run preview      # previsualizar build de producción
+```
+
+### Build y deploy
+
+El deploy a GitHub Pages es automático: cualquier push a `main` dispara `.github/workflows/deploy.yml` que ejecuta `npm ci && npm run build` y sube `dist/` a GitHub Pages.
+
+El base path en producción es `/zentrox-web/` (configurado en `vite.config.ts`). En desarrollo es `/`.
+
+**No usar `npm run deploy`** (script manual de gh-pages) — el CI/CD lo hace automáticamente.
+
+### TypeScript estricto
+
+El build falla si hay errores de tipo. Antes de hacer commit, verificar con `npm run build`. Los parámetros no utilizados y las importaciones sin uso causan error de compilación.
+
+### Sin tests automatizados
+
+No hay Vitest/Jest configurado. Las pruebas son manuales en el navegador.
+
+---
+
+## 8. Reglas para AI Assistants
+
+1. **Colores**: Usar SOLO los 5 colores de la paleta oficial. Nunca inventar colores nuevos.
+2. **Data**: Toda la data de contenido va en `src/data/content.ts`, no hardcodeada en JSX.
+3. **Componentes**: Funcionales con TypeScript. Tipado explícito en props.
+4. **Iconos**: Usar `PixelArt` + matrices en `PIXEL_ICONS`, no emojis ni librerías de íconos externas.
+5. **Animaciones**: Usar `.reveal` vía `<Reveal>` para entradas. Usar clases custom de `index.css` para efectos retro.
+6. **Fuentes**: `Press Start 2P` para títulos/marca, `Space Grotesk` para cuerpo. No añadir otras fuentes.
+7. **Responsive**: Mobile-first. Layout en 1 col → 2 cols (md) → 3 cols (lg).
+8. **Sin librerías nuevas**: No agregar componentes UI externos (MUI, Radix, etc.). Todo custom.
+9. **Navegación**: Sin React Router. Solo anclas `href="#id"`.
+10. **Build limpio**: `npm run build` debe pasar sin errores antes de hacer commit.
+
+---
+
+## 9. Historial reciente de commits
+
+| Hash | Mensaje |
+| :--- | :------ |
+| b8edcc6 | Actualizar actions a Node 24 (deprecacion de Node 20) |
+| 6331345 | Escenas pixel-art procedurales estilo lofi: skyline al atardecer en hero y ciudades nocturnas en portafolio |
+| 55beb14 | Agregar script npm run deploy (gh-pages) |
+| ca402fc | Sitio web oficial de Zentrox: React + TypeScript + Tailwind, estilo retro-arcade |
+
+---
+
+*Actualizado: Junio 2026 — Kevin Porras / Zentrox*
