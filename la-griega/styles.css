@@ -236,10 +236,7 @@ h3 {
    ========================================= */
 .hero {
   min-height: 100svh;
-  background:
-    linear-gradient(to bottom, rgba(26,15,10,0.78) 0%, rgba(90,56,37,0.82) 100%),
-    url('https://images.unsplash.com/photo-1562329265-95a6d7a83440?auto=format&fit=crop&w=1920&q=80')
-    center/cover no-repeat;
+  background: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,6 +244,18 @@ h3 {
   overflow: hidden;
   padding: 7rem 1.5rem 5rem;
   text-align: center;
+}
+
+/* Cafetal SVG ilustrado como fondo */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'%3E%3C!-- Sky gradient --%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%231a0f0a'/%3E%3Cstop offset='100%25' stop-color='%235a3825'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%232d4a2a'/%3E%3Cstop offset='100%25' stop-color='%231a2e18'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23374f34'/%3E%3Cstop offset='100%25' stop-color='%231e3a1b'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill3' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%234a6646'/%3E%3Cstop offset='100%25' stop-color='%23263d23'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1440' height='900' fill='url(%23sky)'/%3E%3C!-- Colinas fondo --%3E%3Cellipse cx='200' cy='700' rx='500' ry='280' fill='url(%23hill1)' opacity='0.6'/%3E%3Cellipse cx='1300' cy='680' rx='480' ry='260' fill='url(%23hill1)' opacity='0.5'/%3E%3C!-- Colinas medias --%3E%3Cellipse cx='400' cy='780' rx='600' ry='250' fill='url(%23hill2)' opacity='0.75'/%3E%3Cellipse cx='1100' cy='760' rx='550' ry='230' fill='url(%23hill2)' opacity='0.7'/%3E%3C!-- Colinas frente --%3E%3Cellipse cx='720' cy='850' rx='900' ry='220' fill='url(%23hill3)' opacity='0.85'/%3E%3C!-- Plantas de café (siluetas) --%3E%3Cg fill='%23243d21' opacity='0.7'%3E%3Cellipse cx='100' cy='820' rx='45' ry='30'/%3E%3Cellipse cx='100' cy='800' rx='35' ry='25'/%3E%3Cellipse cx='100' cy='780' rx='25' ry='20'/%3E%3Cellipse cx='220' cy='830' rx='50' ry='32'/%3E%3Cellipse cx='220' cy='808' rx='38' ry='26'/%3E%3Cellipse cx='220' cy='786' rx='28' ry='21'/%3E%3Cellipse cx='350' cy='840' rx='48' ry='31'/%3E%3Cellipse cx='350' cy='818' rx='37' ry='25'/%3E%3Cellipse cx='470' cy='835' rx='46' ry='30'/%3E%3Cellipse cx='470' cy='813' rx='35' ry='24'/%3E%3Cellipse cx='600' cy='845' rx='52' ry='33'/%3E%3Cellipse cx='600' cy='820' rx='40' ry='27'/%3E%3Cellipse cx='730' cy='848' rx='49' ry='31'/%3E%3Cellipse cx='730' cy='825' rx='38' ry='25'/%3E%3Cellipse cx='860' cy='842' rx='50' ry='32'/%3E%3Cellipse cx='860' cy='819' rx='39' ry='26'/%3E%3Cellipse cx='990' cy='838' rx='47' ry='30'/%3E%3Cellipse cx='990' cy='815' rx='36' ry='24'/%3E%3Cellipse cx='1120' cy='833' rx='51' ry='31'/%3E%3Cellipse cx='1120' cy='810' rx='40' ry='26'/%3E%3Cellipse cx='1250' cy='828' rx='48' ry='30'/%3E%3Cellipse cx='1250' cy='806' rx='37' ry='24'/%3E%3Cellipse cx='1380' cy='835' rx='46' ry='29'/%3E%3Cellipse cx='1380' cy='813' rx='35' ry='23'/%3E%3C/g%3E%3C!-- Frutos rojos (cerezas de café) --%3E%3Cg fill='%23c2703d' opacity='0.55'%3E%3Ccircle cx='95' cy='793' r='4'/%3E%3Ccircle cx='108' cy='800' r='3'/%3E%3Ccircle cx='215' cy='800' r='4'/%3E%3Ccircle cx='228' cy='808' r='3'/%3E%3Ccircle cx='345' cy='810' r='4'/%3E%3Ccircle cx='358' cy='818' r='3'/%3E%3Ccircle cx='465' cy='805' r='4'/%3E%3Ccircle cx='478' cy='813' r='3'/%3E%3Ccircle cx='596' cy='812' r='4'/%3E%3Ccircle cx='608' cy='820' r='3'/%3E%3Ccircle cx='726' cy='817' r='4'/%3E%3Ccircle cx='738' cy='825' r='3'/%3E%3Ccircle cx='856' cy='811' r='4'/%3E%3Ccircle cx='868' cy='819' r='3'/%3E%3Ccircle cx='985' cy='807' r='4'/%3E%3Ccircle cx='997' cy='815' r='3'/%3E%3Ccircle cx='1116' cy='802' r='4'/%3E%3Ccircle cx='1128' cy='810' r='3'/%3E%3Ccircle cx='1246' cy='798' r='4'/%3E%3Ccircle cx='1258' cy='806' r='3'/%3E%3C/g%3E%3C!-- Niebla / bruma baja --%3E%3Crect x='0' y='750' width='1440' height='150' fill='url(%23sky)' opacity='0.25'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .hero__grain {
