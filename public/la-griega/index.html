@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Griega — Bolsas Chorreadoras | Grecia, Costa Rica</title>
+  <meta name="description" content="Bolsas chorreadoras de tela hechas a mano en Grecia, Costa Rica. Puro café, pura tradición." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#inicio" class="navbar__logo">
+        <span class="navbar__logo-mark">La Griega</span>
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#producto">El Producto</a>
+        <a href="#presentaciones">Presentaciones</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn btn--nav">Pedidos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__grain"></div>
+    <div class="hero__content reveal">
+      <span class="hero__origin">Hecho a mano · Grecia, Costa Rica</span>
+      <h1 class="hero__title">La Griega</h1>
+      <p class="hero__tagline">Puro café, pura tradición.</p>
+      <p class="hero__sub">Bolsas chorreadoras de tela artesanales para preparar el mejor café chorreado de la casa.</p>
+      <div class="hero__ctas">
+        <a href="#presentaciones" class="btn btn--primary">Ver presentaciones</a>
+        <a href="#contacto" class="btn btn--ghost">Hacer un pedido</a>
+      </div>
+    </div>
+    <a href="#producto" class="hero__scroll" aria-label="Ir abajo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </a>
+    <div class="hero__drops">
+      <span class="drop drop--1"></span>
+      <span class="drop drop--2"></span>
+      <span class="drop drop--3"></span>
+    </div>
+  </section>
+
+  <!-- GALERÍA FOTOGRÁFICA -->
+  <section class="photo-gallery" aria-label="Galería de café">
+    <div class="photo-strip">
+      <div class="photo-item reveal">
+        <img
+          src="https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&w=800&q=80"
+          alt="Granos de café tostado de cerca"
+          loading="lazy"
+        />
+        <div class="photo-item__caption">Granos tostados</div>
+      </div>
+      <div class="photo-item reveal">
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+          alt="Café siendo preparado con filtro de tela"
+          loading="lazy"
+        />
+        <div class="photo-item__caption">Chorreado artesanal</div>
+      </div>
+      <div class="photo-item reveal">
+        <img
+          src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80"
+          alt="Granos de café arábica de Costa Rica"
+          loading="lazy"
+        />
+        <div class="photo-item__caption">Café arábica</div>
+      </div>
+      <div class="photo-item reveal">
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+          alt="Taza de café negro recién chorreado"
+          loading="lazy"
+        />
+        <div class="photo-item__caption">Listo para servir</div>
+      </div>
+    </div>
+    <p class="photo-gallery__credit">Fotos: Unsplash · Licencia libre de derechos</p>
+  </section>
+
+  <!-- EL PRODUCTO -->
+  <section class="section section--cream" id="producto">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="label">El Producto</span>
+        <h2>Una bolsa chorreadora.<br/>Hecha a mano, de verdad.</h2>
+        <p class="section__sub">La Griega produce bolsas chorreadoras de <strong>tela de franela</strong>, sostenidas por un aro de <strong>alambre galvanizado</strong>. Reutilizables, lavables y pensadas para el uso diario.</p>
+      </div>
+
+      <div class="features">
+        <div class="feature reveal">
+          <div class="feature__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="24" cy="38" rx="14" ry="3" fill="currentColor" opacity="0.12"/>
+              <path d="M16 10 C16 10 14 26 24 34 C34 26 32 10 32 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="#F4ECE0"/>
+              <path d="M16 10 Q24 8 32 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="24" y1="10" x2="24" y2="5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M20 16 Q24 14 28 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              <circle cx="24" cy="38" r="2.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Tela de franela</h3>
+          <p>Material suave y resistente que permite un filtrado limpio, preservando los aceites naturales del café.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <line x1="24" y1="8" x2="24" y2="4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="24" y1="32" x2="24" y2="44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="36" y1="20" x2="40" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="8" y1="20" x2="12" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Aro galvanizado</h3>
+          <p>Soporte de alambre galvanizado resistente que mantiene la forma de la bolsa durante el chorreado.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 36 C12 36 14 20 24 14 C34 20 36 36 36 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M12 36 Q24 40 36 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M17 26 Q22 24 27 26 Q32 24 35 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>100% artesanal</h3>
+          <p>Cada bolsa es cosida a mano, una por una. No existe producción industrial — solo trabajo y dedicación.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 38 L20 28 L28 36 L38 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="38" cy="22" r="3" fill="currentColor"/>
+              <path d="M8 42 H40" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3>Reutilizable</h3>
+          <p>Dura entre 2 y 3 meses con uso diario. Lavable y económica — una docena rinde y reduce desperdicio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENTACIONES Y PRECIOS -->
+  <section class="section" id="presentaciones">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="label">Presentaciones</span>
+        <h2>Tres tamaños,<br/>un solo propósito.</h2>
+        <p class="section__sub">Disponibles para todo tipo de uso, desde porciones individuales hasta cafeteras. Todas se venden <strong>por docena</strong>.</p>
+      </div>
+
+      <div class="products">
+
+        <div class="product-card reveal">
+          <div class="product-card__badge">Más popular</div>
+          <div class="product-card__illustration">
+            <div class="chorreador chorreador--small">
+              <div class="chorreador__bag"></div>
+              <div class="chorreador__ring"></div>
+              <div class="chorreador__drop"></div>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Pequeña</h3>
+            <p class="product-card__desc">Ideal para porciones individuales y uso en el hogar.</p>
+            <ul class="product-card__specs">
+              <li><span>Alto</span><strong>10 cm</strong></li>
+              <li><span>Diámetro</span><strong>9 cm</strong></li>
+              <li><span>Uso</span><strong>Individual / hogar</strong></li>
+            </ul>
+            <div class="product-card__price">
+              <span class="price__currency">₡</span>
+              <span class="price__amount">4 200</span>
+              <span class="price__unit">por docena</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card__illustration">
+            <div class="chorreador chorreador--large">
+              <div class="chorreador__bag"></div>
+              <div class="chorreador__ring"></div>
+              <div class="chorreador__drop"></div>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Grande</h3>
+            <p class="product-card__desc">Para mayor cantidad de café y uso familiar.</p>
+            <ul class="product-card__specs">
+              <li><span>Alto</span><strong>15 cm</strong></li>
+              <li><span>Diámetro</span><strong>9 cm</strong></li>
+              <li><span>Uso</span><strong>Familiar / mayor cantidad</strong></li>
+            </ul>
+            <div class="product-card__price">
+              <span class="price__currency">₡</span>
+              <span class="price__amount">4 500</span>
+              <span class="price__unit">por docena</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card__illustration">
+            <div class="chorreador chorreador--maker">
+              <div class="chorreador__bag"></div>
+              <div class="chorreador__ring"></div>
+              <div class="chorreador__drop"></div>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Coffee Maker</h3>
+            <p class="product-card__desc">Adaptada especialmente para cafeteras.</p>
+            <ul class="product-card__specs">
+              <li><span>Alto</span><strong>7 cm</strong></li>
+              <li><span>Diámetro</span><strong>12 cm</strong></li>
+              <li><span>Uso</span><strong>Cafetera</strong></li>
+            </ul>
+            <div class="product-card__price">
+              <span class="price__currency">₡</span>
+              <span class="price__amount">4 500</span>
+              <span class="price__unit">por docena</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CUIDADOS -->
+  <section class="section section--green" id="cuidados">
+    <div class="container">
+      <div class="care-grid">
+        <div class="care-text reveal">
+          <span class="label label--light">Cuidados</span>
+          <h2>Así cuidas tu bolsa<br/>chorreadora.</h2>
+          <p>Con el cuidado correcto tu bolsa chorreadora puede durar entre 2 y 3 meses de uso diario.</p>
+        </div>
+        <ol class="care-list reveal">
+          <li>
+            <span class="care-list__num">01</span>
+            <div>
+              <strong>Enjuagar con agua</strong>
+              <p>Después de cada uso, enjuaga bien la bolsa con agua. Sin jabón — el jabón afecta el sabor del café.</p>
+            </div>
+          </li>
+          <li>
+            <span class="care-list__num">02</span>
+            <div>
+              <strong>Hervir ocasionalmente</strong>
+              <p>Para una limpieza profunda, hierve la bolsa durante unos minutos. Elimina residuos acumulados.</p>
+            </div>
+          </li>
+          <li>
+            <span class="care-list__num">03</span>
+            <div>
+              <strong>Mantener seca</strong>
+              <p>Guarda la bolsa seca entre usos. La humedad constante acorta su vida útil.</p>
+            </div>
+          </li>
+          <li>
+            <span class="care-list__num">04</span>
+            <div>
+              <strong>Reemplazar a tiempo</strong>
+              <p>Con uso diario, cambia tu bolsa cada 2 a 3 meses para garantizar un café limpio y de buen sabor.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section section--cream" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="stamp">
+            <div class="stamp__inner">
+              <span class="stamp__top">Hecho a mano</span>
+              <span class="stamp__brand">La<br/>Griega</span>
+              <span class="stamp__bottom">Grecia · Costa Rica</span>
+              <div class="stamp__ring"></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <span class="label">Nuestra historia</span>
+          <h2>El nombre que rinde<br/>homenaje a Grecia.</h2>
+          <p>La Griega nació en Grecia, uno de los pueblos más emblemáticos de Costa Rica. El nombre juega con el gentilicio — "la griega" — volviéndolo memorable y fácil de contar.</p>
+          <p>La marca rescata el ritual del <strong>café chorreado</strong>: ese gesto cotidiano, sencillo y profundamente tico de preparar el café gota a gota. No vendemos solo un filtro — vendemos tradición, origen y trabajo hecho a mano.</p>
+          <div class="values">
+            <div class="value"><strong>Tradición</strong><p>Preservamos el método del café chorreado, parte de la identidad tica.</p></div>
+            <div class="value"><strong>Artesanía</strong><p>Cada bolsa se cose a mano, una por una, sin prisa.</p></div>
+            <div class="value"><strong>Origen</strong><p>Orgullosamente de Grecia, Costa Rica.</p></div>
+            <div class="value"><strong>Honestidad</strong><p>Un producto simple, útil y bien hecho.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ LA GRIEGA -->
+  <section class="section" id="porque">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="label">¿Por qué La Griega?</span>
+        <h2>Un filtro con historia<br/>y sentido de lugar.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <span class="why-item__icon">☕</span>
+          <h3>No es industrial</h3>
+          <p>Cada bolsa es cosida a mano en Grecia, Costa Rica. No hay máquinas — solo trabajo honesto.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-item__icon">♻️</span>
+          <h3>Reutilizable y económica</h3>
+          <p>Una docena rinde y reduce desperdicio. Más café, menos basura, mejor sabor.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-item__icon">🇨🇷</span>
+          <h3>Tradición auténtica</h3>
+          <p>Parte del ritual del café tico que se ha preparado así durante generaciones.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-item__icon">📐</span>
+          <h3>Tres presentaciones</h3>
+          <p>Para distintos usos: individual, familiar, o adaptada para cafetera. Una para cada hogar.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-item__icon">🎁</span>
+          <h3>El souvenir perfecto</h3>
+          <p>Ideal para turistas que buscan llevarse un pedazo auténtico de la tradición costarricense.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-item__icon">🏪</span>
+          <h3>Para cafeterías</h3>
+          <p>La venta por docena es ideal para locales que sirven café chorreado y necesitan abastecerse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section--dark" id="contacto">
+    <div class="container">
+      <div class="contact-block reveal">
+        <span class="label label--light">Pedidos</span>
+        <h2>El café de la casa<br/>empieza aquí.</h2>
+        <p>Los pedidos se realizan directamente por WhatsApp. Respondemos rápido — de Grecia para tu cocina.</p>
+        <a href="https://wa.me/50686457832?text=Hola%2C%20me%20interesan%20las%20bolsas%20chorreadoras%20La%20Griega"
+           class="btn btn--whatsapp" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Hacer un pedido por WhatsApp
+        </a>
+        <p class="contact__note">Venta por docenas · Grecia, Costa Rica</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">La Griega</span>
+          <p>Bolsas chorreadoras hechas a mano.<br/>Grecia, Costa Rica.</p>
+        </div>
+        <div class="footer__tagline">
+          <p class="footer__quote">"Puro café, pura tradición."</p>
+          <p class="footer__copy">© 2025 Bolsas Chorreadoras La Griega. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
