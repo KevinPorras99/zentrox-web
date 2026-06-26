@@ -158,11 +158,6 @@ h3 {
 }
 
 /* =========================================
-   HERO — background image
-   ========================================= */
-/* Add farm image as subtle background */
-
-/* =========================================
    NAVBAR
    ========================================= */
 .navbar {
@@ -234,9 +229,12 @@ h3 {
 /* =========================================
    HERO
    ========================================= */
+/* =========================================
+   HERO — rústico
+   ========================================= */
 .hero {
   min-height: 100svh;
-  background: var(--color-primary);
+  background: #120a04;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,26 +244,195 @@ h3 {
   text-align: center;
 }
 
-/* Cafetal SVG ilustrado como fondo */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'%3E%3C!-- Sky gradient --%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%231a0f0a'/%3E%3Cstop offset='100%25' stop-color='%235a3825'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%232d4a2a'/%3E%3Cstop offset='100%25' stop-color='%231a2e18'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23374f34'/%3E%3Cstop offset='100%25' stop-color='%231e3a1b'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill3' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%234a6646'/%3E%3Cstop offset='100%25' stop-color='%23263d23'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1440' height='900' fill='url(%23sky)'/%3E%3C!-- Colinas fondo --%3E%3Cellipse cx='200' cy='700' rx='500' ry='280' fill='url(%23hill1)' opacity='0.6'/%3E%3Cellipse cx='1300' cy='680' rx='480' ry='260' fill='url(%23hill1)' opacity='0.5'/%3E%3C!-- Colinas medias --%3E%3Cellipse cx='400' cy='780' rx='600' ry='250' fill='url(%23hill2)' opacity='0.75'/%3E%3Cellipse cx='1100' cy='760' rx='550' ry='230' fill='url(%23hill2)' opacity='0.7'/%3E%3C!-- Colinas frente --%3E%3Cellipse cx='720' cy='850' rx='900' ry='220' fill='url(%23hill3)' opacity='0.85'/%3E%3C!-- Plantas de café (siluetas) --%3E%3Cg fill='%23243d21' opacity='0.7'%3E%3Cellipse cx='100' cy='820' rx='45' ry='30'/%3E%3Cellipse cx='100' cy='800' rx='35' ry='25'/%3E%3Cellipse cx='100' cy='780' rx='25' ry='20'/%3E%3Cellipse cx='220' cy='830' rx='50' ry='32'/%3E%3Cellipse cx='220' cy='808' rx='38' ry='26'/%3E%3Cellipse cx='220' cy='786' rx='28' ry='21'/%3E%3Cellipse cx='350' cy='840' rx='48' ry='31'/%3E%3Cellipse cx='350' cy='818' rx='37' ry='25'/%3E%3Cellipse cx='470' cy='835' rx='46' ry='30'/%3E%3Cellipse cx='470' cy='813' rx='35' ry='24'/%3E%3Cellipse cx='600' cy='845' rx='52' ry='33'/%3E%3Cellipse cx='600' cy='820' rx='40' ry='27'/%3E%3Cellipse cx='730' cy='848' rx='49' ry='31'/%3E%3Cellipse cx='730' cy='825' rx='38' ry='25'/%3E%3Cellipse cx='860' cy='842' rx='50' ry='32'/%3E%3Cellipse cx='860' cy='819' rx='39' ry='26'/%3E%3Cellipse cx='990' cy='838' rx='47' ry='30'/%3E%3Cellipse cx='990' cy='815' rx='36' ry='24'/%3E%3Cellipse cx='1120' cy='833' rx='51' ry='31'/%3E%3Cellipse cx='1120' cy='810' rx='40' ry='26'/%3E%3Cellipse cx='1250' cy='828' rx='48' ry='30'/%3E%3Cellipse cx='1250' cy='806' rx='37' ry='24'/%3E%3Cellipse cx='1380' cy='835' rx='46' ry='29'/%3E%3Cellipse cx='1380' cy='813' rx='35' ry='23'/%3E%3C/g%3E%3C!-- Frutos rojos (cerezas de café) --%3E%3Cg fill='%23c2703d' opacity='0.55'%3E%3Ccircle cx='95' cy='793' r='4'/%3E%3Ccircle cx='108' cy='800' r='3'/%3E%3Ccircle cx='215' cy='800' r='4'/%3E%3Ccircle cx='228' cy='808' r='3'/%3E%3Ccircle cx='345' cy='810' r='4'/%3E%3Ccircle cx='358' cy='818' r='3'/%3E%3Ccircle cx='465' cy='805' r='4'/%3E%3Ccircle cx='478' cy='813' r='3'/%3E%3Ccircle cx='596' cy='812' r='4'/%3E%3Ccircle cx='608' cy='820' r='3'/%3E%3Ccircle cx='726' cy='817' r='4'/%3E%3Ccircle cx='738' cy='825' r='3'/%3E%3Ccircle cx='856' cy='811' r='4'/%3E%3Ccircle cx='868' cy='819' r='3'/%3E%3Ccircle cx='985' cy='807' r='4'/%3E%3Ccircle cx='997' cy='815' r='3'/%3E%3Ccircle cx='1116' cy='802' r='4'/%3E%3Ccircle cx='1128' cy='810' r='3'/%3E%3Ccircle cx='1246' cy='798' r='4'/%3E%3Ccircle cx='1258' cy='806' r='3'/%3E%3C/g%3E%3C!-- Niebla / bruma baja --%3E%3Crect x='0' y='750' width='1440' height='150' fill='url(%23sky)' opacity='0.25'/%3E%3C/svg%3E");
-  background-size: cover;
-  background-position: center bottom;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.hero__grain {
+/* Grano / textura de papel kraft */
+.hero__texture {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(194,112,61,0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 80% at 80% 100%, rgba(107,124,90,0.12) 0%, transparent 70%);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23grain)' opacity='0.18'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='none'/%3E%3Cpath d='M0 40h80M40 0v80' stroke='%23c2703d' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 300px 300px, 80px 80px;
   pointer-events: none;
 }
+
+/* Viñeta — oscurece los bordes */
+.hero__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 85% 80% at 50% 45%,
+    transparent 30%,
+    rgba(8,4,1,0.55) 75%,
+    rgba(4,2,0,0.85) 100%
+  );
+  pointer-events: none;
+}
+
+/* Resplandor cálido central */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 50%,
+    rgba(140,70,20,0.18) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Badge sobre el título */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+.hero__badge-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Marco decorativo al estilo etiqueta artesanal */
+.hero__frame {
+  border: 1.5px solid rgba(194,112,61,0.35);
+  padding: 2.5rem 3.5rem;
+  margin: 0 auto 2rem;
+  max-width: 580px;
+  position: relative;
+}
+/* Esquinas del marco */
+.hero__frame::before,
+.hero__frame::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--color-accent);
+  border-style: solid;
+  opacity: 0.6;
+}
+.hero__frame::before {
+  top: -3px; left: -3px;
+  border-width: 2px 0 0 2px;
+}
+.hero__frame::after {
+  bottom: -3px; right: -3px;
+  border-width: 0 2px 2px 0;
+}
+/* Esquinas restantes via inner */
+.hero__frame-inner {
+  position: relative;
+}
+.hero__frame-inner::before,
+.hero__frame-inner::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--color-accent);
+  border-style: solid;
+  opacity: 0.6;
+}
+.hero__frame-inner::before {
+  top: calc(-2.5rem - 2px); right: calc(-3.5rem - 2px);
+  border-width: 2px 2px 0 0;
+}
+.hero__frame-inner::after {
+  bottom: calc(-2.5rem - 2px); left: calc(-3.5rem - 2px);
+  border-width: 0 0 2px 2px;
+}
+
+/* Separador con diamante */
+.hero__rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.hero__rule-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(194,112,61,0.4);
+  max-width: 80px;
+}
+.hero__rule-diamond {
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  transform: rotate(45deg);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.hero__eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(244,236,224,0.5);
+  margin-bottom: 0.75rem;
+}
+
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 9vw, 6rem);
+  color: var(--color-bg);
+  line-height: 1;
+  margin: 0;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+}
+
+.hero__tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  color: var(--color-accent);
+  margin: 0;
+  opacity: 0.9;
+}
+
+.hero__sub {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244,236,224,0.38);
+  margin: 0 auto 2.5rem;
+  max-width: 420px;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(244,236,224,0.3);
+  text-decoration: none;
+  animation: bounce 2s ease-in-out infinite;
+  z-index: 2;
+}
+
+/* Drops eliminados en diseño rústico */
+.hero__drops { display: none; }
 
 .hero__content {
   position: relative;
