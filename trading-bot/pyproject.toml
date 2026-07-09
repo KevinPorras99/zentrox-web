@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zentrox-bot"
+version = "0.1.0"
+description = "Capital-preservation-first crypto trading bot (Zentrox)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Zentrox", email = "kevinporras9906@gmail.com" }]
+dependencies = []  # core runs on the standard library only
+
+[project.optional-dependencies]
+live = ["ccxt>=4.0"]     # only needed for the live/historical exchange feed
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+zentrox-bot = "zentrox_bot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["zentrox_bot*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

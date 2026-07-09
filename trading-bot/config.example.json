@@ -1,0 +1,42 @@
+{
+  "symbols": ["BTC/USDT", "ETH/USDT"],
+  "initial_equity": 10000.0,
+  "live": false,
+  "journal_path": "zentrox_journal.sqlite",
+  "risk": {
+    "risk_per_trade": 0.01,
+    "min_rr": 2.0,
+    "ideal_rr": 3.0,
+    "max_consecutive_losses": 3,
+    "daily_loss_limit": 0.03,
+    "max_drawdown_pause": 0.20,
+    "max_total_exposure": 0.30,
+    "max_open_positions": 5,
+    "max_positions_per_symbol": 1,
+    "max_correlation": 0.8
+  },
+  "strategy": {
+    "htf_trend": "1d",
+    "mtf_trend": "4h",
+    "operational": "15m",
+    "ema_fast": 21,
+    "ema_slow": 55,
+    "swing_lookback": 5,
+    "level_lookback": 120,
+    "breakout_buffer": 0.0005,
+    "atr_period": 14,
+    "atr_stop_mult": 1.5,
+    "target_rr": 3.0,
+    "min_volume_ratio": 1.0,
+    "use_trailing_stop": false,
+    "trailing_atr_mult": 2.0,
+    "max_holding_bars": 0,
+    "partial_fraction": 0.0,
+    "partial_rr": 2.0
+  },
+  "execution": {
+    "commission": 0.0004,
+    "slippage": 0.0005,
+    "max_spread": 0.001
+  }
+}

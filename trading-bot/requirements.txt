@@ -1,0 +1,4 @@
+# The core bot has NO third-party runtime dependencies (standard library only).
+# Optional extras:
+#   ccxt>=4.0     # live / historical exchange data feed (CCXTFeed)
+#   pytest>=7.0   # test runner (the suite also runs with `python -m unittest`)
